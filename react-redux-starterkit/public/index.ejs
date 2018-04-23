@@ -1,0 +1,28 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>4IR ACADEMY</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="logo" content="favicon.ico" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/loaderStyle.css">
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="loader"></div>
+    </div>
+    <script src="<%= bundle %>" async defer></script>
+    <%_ if (!debug && config.trackingID) { _%>
+    <script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','<%= config.trackingID %>','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <%_ } _%>
+  </body>
+</html>
